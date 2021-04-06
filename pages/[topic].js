@@ -809,7 +809,7 @@ export async function getStaticProps() {
   `;
   const apolloClient = new ApolloClient({
     link: new HttpLink({
-      uri: 'https://data.cinemaperiod.com/graphql',
+      uri: 'http://data.cinemaperiod.com/graphql',
     }),
     cache: new InMemoryCache()
   });
@@ -823,7 +823,7 @@ export async function getStaticProps() {
     // slugs.push(`/test/${post?.node?.slug}`);
   });
 
-  console.log('getstaticprops', data?.blogposts?.edges);
+  // console.log('getstaticprops', data?.blogposts?.edges);
 
   return {
     props: {
@@ -855,7 +855,7 @@ export async function getStaticPaths() {
   `;
   const apolloClient = new ApolloClient({
     link: new HttpLink({
-      uri: 'https://data.cinemaperiod.com/graphql',
+      uri: 'http://data.cinemaperiod.com/graphql',
     }),
     cache: new InMemoryCache()
   });
@@ -871,7 +871,7 @@ export async function getStaticPaths() {
     slugs.push(`/${post?.node?.slug}`);
   });
 
-  console.log('getstaticpaths', slugs?.length);
+  console.log('getstaticpaths', slugs);
 
   // return data?.allPosts
   return {
