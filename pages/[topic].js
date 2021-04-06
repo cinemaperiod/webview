@@ -46,7 +46,7 @@ function Post({ topicsData = {} }) {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, [topic]);
 
-  if (Object.keys(post).length === 0 && post.constructor === Object) return <div />
+  // if (Object.keys(post).length === 0 && post.constructor === Object) return <div />
 
   const youtubeLinks = post?.youtubelinks?.split(',') || [];
   const socialTags = post?.socialtags?.split(',') || [];
