@@ -36,9 +36,9 @@ function Post({ topicsData = {} }) {
     setWindowWidth(window.innerWidth);
     const handleWindowResize = () => setWindowWidth(window.innerWidth)
     window.addEventListener('resize', handleWindowResize);
-    // console.log(topicsData, Object.keys(topicsData)?.length, topic, 'arun2');
+    console.log(topicsData, Object.keys(topicsData)?.length, topic, 'arun2');
     const postDataAvailable = topicsData?.find((data) => data?.node?.slug === topic);
-    // console.log(postDataAvailable, 'arun123');
+    console.log(postDataAvailable, 'arun123');
     if (topic && topicsData?.length > 0 && postDataAvailable) {
       setPostData(postDataAvailable?.node?.postData);
     }
@@ -809,7 +809,7 @@ export async function getStaticProps() {
   `;
   const apolloClient = new ApolloClient({
     link: new HttpLink({
-      uri: 'http://data.cinemaperiod.com/graphql',
+      uri: 'https://data.cinemaperiod.com/graphql',
     }),
     cache: new InMemoryCache()
   });
@@ -823,7 +823,7 @@ export async function getStaticProps() {
     // slugs.push(`/test/${post?.node?.slug}`);
   });
 
-  // console.log('getstaticprops', data?.blogposts?.edges);
+  console.log('getstaticprops', data?.blogposts?.edges);
 
   return {
     props: {
@@ -855,7 +855,7 @@ export async function getStaticPaths() {
   `;
   const apolloClient = new ApolloClient({
     link: new HttpLink({
-      uri: 'http://data.cinemaperiod.com/graphql',
+      uri: 'https://data.cinemaperiod.com/graphql',
     }),
     cache: new InMemoryCache()
   });
@@ -871,7 +871,7 @@ export async function getStaticPaths() {
     slugs.push(`/${post?.node?.slug}`);
   });
 
-  // console.log('getstaticpaths', slugs?.length);
+  console.log('getstaticpaths', slugs?.length);
 
   // return data?.allPosts
   return {
