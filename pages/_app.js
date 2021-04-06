@@ -3,7 +3,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 const client = new ApolloClient({
-  uri: 'http://data.cinemaperiod.com/graphql',
+  uri: 'https://data.cinemaperiod.com/graphql',
 });
 
 function MyApp({ Component, pageProps }) {
