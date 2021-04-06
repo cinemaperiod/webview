@@ -112,7 +112,7 @@ export default function Arun() {
                 }
                 let result = [];
                 data?.blogposts?.edges?.forEach((post) => {
-                  if (post?.node && post?.node?.postData?.type === 'post') {
+                  if (post?.node?.postData?.type === 'post' || post?.node?.postData?.type === 'review') {
                     const postData = post?.node?.postData;
                     postData.slug = post?.node?.slug;
                     result.push(postData);
