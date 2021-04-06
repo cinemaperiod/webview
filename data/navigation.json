@@ -1,0 +1,25 @@
+{
+  "menuHeading": "Menu",
+  "menuItems": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Reviews",
+      "url": "/reviews/allreviews"
+    },
+    {
+      "name": "OTT Special",
+      "url": "/"
+    },
+    {
+      "name": "Trending",
+      "url": "/"
+    },
+    {
+      "name": "Social",
+      "url": "/"
+    }
+  ]
+}
